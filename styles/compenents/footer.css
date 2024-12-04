@@ -1,0 +1,12 @@
+footer{
+   background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+}
+.arrow{
+	width: 2rem;
+	margin: auto;
+	color:#f3f3f3; 
+}

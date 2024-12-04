@@ -1,0 +1,126 @@
+.hero {
+  display: flex;
+  padding-inline: 1.25rem;
+  padding-top: 6rem;
+  max-width: 1280px;
+  margin: auto;
+}
+.hero--left{
+  flex: 1;
+  opacity: 0; /* Invisível no início */
+  transform: translateX(-100px); /* Começa fora da tela à esquerda */
+  animation: slideInLeft 1s ease-out forwards; /* Define a animação */
+
+}
+.hero--right { 
+  flex: 1;
+}
+.hero--up-text{
+  color: #c774ff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.hero--title {
+  font-size: 2.8rem;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  margin-top:0.75rem ;
+}
+
+.hero--description {
+  font-size: 1rem;
+  opacity: 0.6;
+  font-weight: 400;
+  line-height: calc(1em + 0.5rem);
+  margin-block: 1.25rem;
+  max-width: 54ch;
+}
+.hero--btn {
+  background: linear-gradient(to right, #b4a2bf, #c774ff);
+  padding: 0.5em 2em;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #000;
+  
+
+  
+}
+a{
+    text-decoration: none;
+    
+}
+.hero--btn,a:active{
+  color: #1d0131;
+}
+.hero--btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.hero--img{
+  margin-left: 8rem;
+  max-width: 400px;
+  border-radius:9%;
+  opacity: 0; /* Invisível no início */
+  transform: translateX(100px); /* Começa fora da tela à direita */
+  animation: slideInRight 1s ease-out forwards;
+  animation-delay: 0.3s; /* Pequeno atraso para sincronizar */
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+@media (width < 1024px) {
+    .hero{  
+        gap: 1rem;
+    }
+    .hero--title{
+        max-width: 25rem;
+        
+    }
+    .hero--img{
+        width: 90%;
+        max-width: 300px;
+        margin-inline: auto;
+        
+    }
+    }
+
+
+@media (width < 680px){
+    .hero{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .header--logo{
+        font-size: 1.2rem;
+    }
+    .hero--title{
+        font-size: 2rem ;
+    }
+    .hero--img{
+        width: 80%;
+        margin-inline: auto;
+    }
+  }

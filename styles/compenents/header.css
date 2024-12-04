@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1.25rem;
+  padding-block: 1.25rem;
+  align-items: center;
+  max-width: 1380px;
+  margin: auto;
+}
+.header--logo {
+  font-family: "Pinyon Script", cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.nav--ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav--a {
+  color: inherit;
+  text-decoration: none;
+}
+.nav--li:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+  color: #c774ff;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.nav--a:active {
+  color: #1d0131;
+}
+.header--icon-btn {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #f3f3f3;
+  cursor: pointer;
+}
+.header--icon-btn::before,
+.header--icon-btn::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #f3f3f3;
+
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+@media (width < 799px) {
+  .header--icon-btn {
+    display: block;
+    z-index: 1;
+  }
+  .nav--ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    clip-path: circle(100px at 90% -18%);
+    background: #1d0131;
+
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .nav--a {
+    font-size: 24px;
+    opacity: 0;
+  }
+  .nav--ul li:nth-child(1) a {
+    transition: 0.5s 0.3s;
+  }
+  .nav--ul li:nth-child(2) a {
+    transition: 0.5s 0.5s;
+  }
+  .nav--ul li:nth-child(3) a {
+    transition: 0.5s 0.7s;
+  }
+  .active.nav--ul .nav--a {
+    opacity: 1;
+  }
+
+  .header--nav .active.nav--ul {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+  .nav--ul.active .header--icon-btn {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+  .nav--ul.active .header--icon-btn::before {
+    transform: rotate(135deg);
+  }
+ .nav--ul.active .header--icon-btn::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  .header--logo {
+    font-size: 1.3rem;
+  }
+}

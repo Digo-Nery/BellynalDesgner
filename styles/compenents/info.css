@@ -1,0 +1,117 @@
+.info {
+  padding-top: 2rem;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-bottom: 13rem;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 2555, 0.2);
+}
+.item-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-inline: 1.25rem;
+}
+.item {
+  flex: 1;
+  min-width: 150px;
+}
+.item--title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  color: #c774ff; /* Cor personalizada */
+  opacity: 0; /* Inicialmente invisível */
+  animation: fadeIn 1s ease-out forwards; /* Efeito de entrada */
+}
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.item--description {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*INFO WRAPPER*/
+
+.info-wrapper {
+  display: flex;
+  align-items: center;
+  padding-inline:1.25rem ;
+  gap: 1.5rem;
+  margin-top: -10rem;
+}
+.info--left {
+  flex: 1;
+}
+.img-wrapper{
+    height: 33rem;
+    opacity: 0; /* Invisível no início */
+    transform: translateX(-100px); /* Começa fora da tela à esquerda */
+    animation: slideInLeft 1s ease-out forwards; /* Define a animação */
+}
+.info--right {
+  flex: 1;
+  opacity: 0; /* Invisível no início */
+  transform: translateX(100px); /* Começa fora da tela à direita */
+  animation: slideInRight 1s ease-out forwards;
+  animation-delay: 0.3s; /* Pequeno atraso para sincronizar */
+}
+.section--up-text {
+  color: #c774ff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.section--title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 560;
+}
+.section--decription {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: calc(1rem + 0.6rem);
+  margin-block: 1rem;
+}
+.section--descubra {
+  background: linear-gradient(to right, #b4a2bf, #c774ff);
+  padding: 0.5em 2em;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #000;
+}
+.section--descubra:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media (width < 1024px){
+  .info-wrapper{
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .section--decription{
+    max-width: 60ch;
+  }
+  .img{
+    height: 13rem;
+   
+  }
+  .info--left{
+
+  }
+}

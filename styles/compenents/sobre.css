@@ -1,0 +1,23 @@
+.fundo--img{
+ position: fixed;
+ z-index: -1;
+ 
+}
+.belly-fundo{
+    width: 100% ;
+   
+   
+}
+.mascara{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+@media (width < 414px){
+
+    .belly-fundo{
+        height:60rem ;
+    }
+}
