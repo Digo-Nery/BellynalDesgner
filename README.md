@@ -76,3 +76,11 @@ Este é um projeto desenvolvido para uma cliente especializada em unhas de fibra
 <embed width="320" height="240" src="Yes Bank Advertisment.mp4">
 </object>
 </video>
+# Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar um pull request.
+### Contato
+Caso tenha dúvidas ou queira contratar meus serviços:
+
++ E-mail: rneribastos@hotmail.com
++ LinkedIn:<button   class="section--descubra"> <a href="https://www.linkedin.com/in/rodrigo-neri-bastos-064859285/">Meu perfil </a></button>
++ WhatsApp: <button   class="section--descubra"> <a href="https://w.app/ajQOKM">Me chame aqui!</a></button>
