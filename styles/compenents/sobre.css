@@ -1,23 +1,32 @@
-.fundo--img{
- position: fixed;
- z-index: -1;
- 
-}
-.belly-fundo{
-    width: 100% ;
+.fundo--img {
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    background-image: url("/assest/izabelly1.jpg"); /* Caminho corrigido */
+    background-size: 80%; /* Mostra 120% da largura da imagem, reduzindo o zoom */
    
-   
-}
-.mascara{
+    background-position: center;
+    background-repeat: no-repeat; /* Garante que a imagem não se repita */
+  }
+  
+  .mascara {
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-}
-@media (width < 414px){
-
-    .belly-fundo{
-        height:60rem ;
+    left: 0;
+    background: linear-gradient(
+      109deg,
+      rgba(10, 12, 16, 0.99) 15%,
+      rgba(10, 12, 16, 0.7) 50%,
+      rgba(10, 12, 16, 0.99) 85%
+    );
+  }
+  
+  @media (max-width: 414px) {
+    .fundo--img {
+      height: 40vh; /* Ajusta a altura para dispositivos menores */
+      background-size: 90%; /* Mostra 120% da largura da imagem, reduzindo o zoom */
     }
-}
+  }
+  
