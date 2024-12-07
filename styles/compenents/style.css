@@ -13,25 +13,29 @@
   max-width: 1280px;
   margin-inline: auto;
 }
+html,
+body {
+  height: 100%; /* Garante que o html e body sempre ocupem 100% da altura */
+  margin: 0;
+}
 
 body {
-    font-family: "Poppins", sans-serif;
-    color: #f3f3f3;
-  min-height: 100vh;
-  background: rgb(149, 141, 169);
+  
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  color: #f3f3f3;
   background: linear-gradient(
     0deg,
-   
-    rgba(149, 141, 169, 1) 6%,
     rgba(149, 141, 169, 1) 9%,
+    rgba(149, 141, 169, 1) 15%,
     rgba(131, 139, 165, 1) 55%,
     rgba(118, 138, 162, 1) 63%,
     rgba(118, 138, 162, 1) 72%
-    
   );
- 
-
+  background-attachment: fixed; /* Importante para fixar o gradiente */
+  background-size: cover; /* Garante que ele cubra toda a página */
 }
+
 
 img,
 picture,
