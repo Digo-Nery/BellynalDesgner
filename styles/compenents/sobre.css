@@ -23,10 +23,10 @@
     );
   }
   
-  @media (max-width: 414px) {
+  @media (max-width: 1025px) {
     .fundo--img {
-      height: 40vh; /* Ajusta a altura para dispositivos menores */
-      background-size: 90%; /* Mostra 120% da largura da imagem, reduzindo o zoom */
+      height: 50vh; /* Garante que a altura seja sempre 100% da tela no celular */
+      background-size: cover; /* Faz a imagem cobrir todo o espaço disponível */
     }
   }
   
