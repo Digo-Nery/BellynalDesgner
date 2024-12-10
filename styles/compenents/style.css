@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   color: #f3f3f3;
+  background: rgb(149, 141, 169); /* Cor sólida de fallback */
   background: linear-gradient(
     0deg,
     rgba(149, 141, 169, 1) 9%,
