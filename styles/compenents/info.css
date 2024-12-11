@@ -15,6 +15,8 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   padding-inline: 1.25rem;
+
+  
 }
 .item {
   flex: 1;
@@ -26,8 +28,8 @@
   font-weight: 600;
   line-height: 1;
   text-align: center;
-  color: ; /* Cor personalizada */
-  opacity: 0; /* Inicialmente invisível */
+  color:#f3f3f3 ; /* Cor personalizada */
+  opacity: 1; /* Inicialmente invisível */
   animation: fadeIn 1s ease-out forwards; /* Efeito de entrada */
 }
 /* Animação de entrada */
@@ -48,17 +50,26 @@
 /*INFO WRAPPER*/
 
 .info-wrapper {
+  
+  height: 500px;
+  margin-inline: auto;
   display: flex;
   align-items: center;
   padding-inline:1.25rem ;
   gap: 1.5rem;
   margin-top: -10rem;
+  background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/assest/4.png); /* Adicione um fundo personalizado */
+    background-size: 28rem;
 }
 .info--left {
   flex: 1;
+  display: none;
 }
 .img-wrapper{
-    height: 33rem;
+    height: 25rem;
     opacity: 0; /* Invisível no início */
     transform: translateX(-100px); /* Começa fora da tela à esquerda */
     animation: slideInLeft 1s ease-out forwards; /* Define a animação */
@@ -69,21 +80,25 @@
   transform: translateX(100px); /* Começa fora da tela à direita */
   animation: slideInRight 1s ease-out forwards;
   animation-delay: 0.3s; /* Pequeno atraso para sincronizar */
+  text-align: center;
 }
 .section--up-text {
   color: #c774ff;
   text-transform: uppercase;
   font-weight: 500;
+  text-align: center;
 }
 .section--title {
   font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 560;
+  text-align: center;
 }
 .section--decription {
   color: rgba(255, 255, 255, 0.5);
   line-height: calc(1rem + 0.6rem);
   margin-block: 1rem;
+  text-align: center;
 }
 .section--descubra {
   background: linear-gradient(to right, #b4a2bf, #c774ff);
@@ -91,6 +106,10 @@
   border-radius: 6px;
   font-weight: 500;
   color: #000;
+  margin: 0 auto;
+  align-items: center;
+  
+  
 }
 .section--descubra:hover {
   transform: scale(1.1);
@@ -103,15 +122,22 @@
   .info-wrapper{
     flex-direction: column;
     gap: 0.1rem;
+    height: 500px;
   }
   .section--decription{
     max-width: 60ch;
   }
   .img{
-    height: 13rem;
+    height: 15rem;
    
   }
   .info--left{
-
+    display: none;
+  }
+  .img-wrapper{
+    display: none;
+  }
+  .info--right{
+    margin-top: 5rem;
   }
 }

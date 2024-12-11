@@ -35,8 +35,16 @@ body {
   );
   background-attachment: fixed; /* Importante para fixar o gradiente */
   background-size: cover; /* Garante que ele cubra toda a página */
+
+}
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
+body.loaded {
+  opacity: 1;
+}
 
 img,
 picture,
